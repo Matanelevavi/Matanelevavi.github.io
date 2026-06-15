@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matanel Levavi · Software Developer</title>
+  <meta name="description" content="Matanel Levavi - Computer Science student and software developer. Java, Python, C/C++, Full-Stack. Projects in compression, AI, networking and algorithms." />
+
+  <!-- Open Graph for nice link previews when shared -->
+  <meta property="og:title" content="Matanel Levavi · Software Developer" />
+  <meta property="og:description" content="Computer Science student & developer. Building modular software in Java, Python, C/C++ and modern Full-Stack." />
+  <meta property="og:type" content="website" />
+
+  <!-- Inline SVG monogram favicon (no external file needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%230a0e1a'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EML%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated gradient background -->
+  <div class="bg-aurora" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="brand" aria-label="Matanel Levavi - home">
+      <span class="brand-mark">ML</span>
+      <span class="brand-name" data-i18n="brandName">Matanel Levavi</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#skills" data-i18n="navSkills">Skills</a>
+      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a href="#journey" data-i18n="navJourney">Journey</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="pill" id="langToggle" type="button" aria-label="Switch language">
+        <span id="langLabel">EN</span>
+      </button>
+      <button class="pill icon" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="theme-icon">◐</span>
+      </button>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-badge reveal">
+        <span class="dot"></span>
+        <span data-i18n="heroBadge">Open to projects & opportunities</span>
+      </div>
+
+      <h1 class="hero-title reveal">
+        <span data-i18n="heroHi">Hi, I'm</span>
+        <span class="grad-text">Matanel Levavi</span>
+      </h1>
+
+      <p class="hero-role reveal">
+        <span data-i18n="heroRolePrefix">I build</span>
+        <span class="rotator" id="rotator"></span>
+      </p>
+
+      <p class="hero-lead reveal" data-i18n="heroLead">
+        Computer Science student at Ariel University. I design clean, modular software in Java, Python and C/C++ - from low-level compression engines to modern full-stack apps. Disciplined, fast-learning, and built for teamwork.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary" data-i18n="heroSeeWork">See my work</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="heroHire">Work with me</a>
+        <button class="btn btn-ghost" id="printCv" type="button" data-i18n="heroCv">Download CV</button>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num">6+</span>
+          <span class="stat-label" data-i18n="statProjects">Featured projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label" data-i18n="statLangs">Languages mastered</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2027</span>
+          <span class="stat-label" data-i18n="statGrad">B.Sc. expected</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="aboutKicker">01 · About</span>
+      <h2 data-i18n="aboutTitle">More than code</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n="aboutP1">I'm a motivated Computer Science student with a strong foundation in Java, Python and C, and a real passion for writing clean, efficient, maintainable code. I learn fast, I ship, and I care about getting the details right.</p>
+        <p data-i18n="aboutP2">Before university I served as a combat soldier and team leader in the Golani Brigade, and was later called up for reserve duty during the Iron Swords war. That background shaped how I work: calm under pressure, responsible, and dependable when it matters.</p>
+        <p data-i18n="aboutP3">Alongside my studies I mentor youth with disabilities and have led educational programs - I genuinely enjoy working with people, not just machines.</p>
+      </div>
+
+      <div class="about-cards">
+        <div class="mini-card reveal">
+          <span class="mini-emoji">🎯</span>
+          <h3 data-i18n="trait1Title">Disciplined</h3>
+          <p data-i18n="trait1Text">Strong self-management and follow-through, even under pressure.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-emoji">🧩</span>
+          <h3 data-i18n="trait2Title">Analytical</h3>
+          <p data-i18n="trait2Text">Structured problem-solving from algorithms to architecture.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-emoji">🚀</span>
+          <h3 data-i18n="trait3Title">Fast learner</h3>
+          <p data-i18n="trait3Text">Proactive, curious, and quick to pick up new tech.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-emoji">🤝</span>
+          <h3 data-i18n="trait4Title">Team player</h3>
+          <p data-i18n="trait4Text">Leadership and collaboration from the field to the classroom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section" id="skills">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="skillsKicker">02 · Skills</span>
+      <h2 data-i18n="skillsTitle">Tools of the trade</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-col reveal">
+        <h3 data-i18n="skillsLangs">Languages</h3>
+        <div class="chips" id="chipsLangs"></div>
+      </div>
+      <div class="skill-col reveal">
+        <h3 data-i18n="skillsFrontend">Web & Frontend</h3>
+        <div class="chips" id="chipsFront"></div>
+      </div>
+      <div class="skill-col reveal">
+        <h3 data-i18n="skillsBackend">Backend & Data</h3>
+        <div class="chips" id="chipsBack"></div>
+      </div>
+      <div class="skill-col reveal">
+        <h3 data-i18n="skillsConcepts">Concepts & Tools</h3>
+        <div class="chips" id="chipsConcepts"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="section" id="projects">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="projKicker">03 · Projects</span>
+      <h2 data-i18n="projTitle">Things I've built</h2>
+      <p class="section-sub" data-i18n="projSub">A selection of academic and personal work. Every project links to its source on GitHub.</p>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid"></div>
+
+    <div class="projects-foot reveal">
+      <a href="https://github.com/Matanelevavi" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="projAll">See all repositories on GitHub →</a>
+    </div>
+  </section>
+
+  <!-- ===================== JOURNEY / TIMELINE ===================== -->
+  <section class="section" id="journey">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="journeyKicker">04 · Journey</span>
+      <h2 data-i18n="journeyTitle">Education, service & experience</h2>
+    </div>
+
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section contact" id="contact">
+    <div class="contact-card reveal">
+      <span class="kicker center" data-i18n="contactKicker">05 · Contact</span>
+      <h2 data-i18n="contactTitle">Have a project in mind?</h2>
+      <p data-i18n="contactLead">I'm open to freelance projects, collaborations and full-time opportunities. Tell me what you need - I'll get back to you quickly.</p>
+
+      <div class="contact-actions">
+        <a class="btn btn-primary" id="emailBtn"
+           href="mailto:matanelevavi@gmail.com?subject=Project%20opportunity%20for%20Matanel&body=Hi%20Matanel%2C%0A%0AI'd%20like%20to%20talk%20to%20you%20about%20a%20project.%0A%0A">
+          ✉️ <span data-i18n="contactEmail">Email me a proposal</span>
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/matanel-levavi/" target="_blank" rel="noopener">in · LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Matanelevavi" target="_blank" rel="noopener">⌥ · GitHub</a>
+      </div>
+
+      <p class="contact-mail">matanelevavi@gmail.com</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Matanel Levavi · <span data-i18n="footerBuilt">Designed & built with care</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
