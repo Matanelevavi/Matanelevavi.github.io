@@ -54,6 +54,7 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
     <div class="hero-inner">
       <div class="hero-badge reveal">
         <span class="dot"></span>
@@ -82,15 +83,15 @@
 
       <div class="hero-stats reveal">
         <div class="stat">
-          <span class="stat-num">6+</span>
+          <span class="stat-num" data-count-to="8" data-suffix="+">0</span>
           <span class="stat-label" data-i18n="statProjects">Featured projects</span>
         </div>
         <div class="stat">
-          <span class="stat-num">5</span>
+          <span class="stat-num" data-count-to="7">0</span>
           <span class="stat-label" data-i18n="statLangs">Languages mastered</span>
         </div>
         <div class="stat">
-          <span class="stat-num">2027</span>
+          <span class="stat-num" data-count-to="2027">0</span>
           <span class="stat-label" data-i18n="statGrad">B.Sc. expected</span>
         </div>
       </div>
@@ -164,6 +165,10 @@
         <h3 data-i18n="skillsConcepts">Concepts & Tools</h3>
         <div class="chips" id="chipsConcepts"></div>
       </div>
+      <div class="skill-col reveal">
+        <h3 data-i18n="skillsAI">AI & LLM</h3>
+        <div class="chips" id="chipsAI"></div>
+      </div>
     </div>
   </section>
 
@@ -179,6 +184,10 @@
 
     <div class="projects-foot reveal">
       <a href="https://github.com/Matanelevavi" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="projAll">See all repositories on GitHub →</a>
+      <div class="gh-live" id="ghLive">
+        <span class="dot"></span>
+        <span id="ghLiveStat"></span>
+      </div>
     </div>
   </section>
 
@@ -215,6 +224,8 @@
   <footer class="footer">
     <p>© <span id="year"></span> Matanel Levavi · <span data-i18n="footerBuilt">Designed & built with care</span></p>
   </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Scroll to top">↑</button>
 
   <script src="script.js"></script>
 </body>

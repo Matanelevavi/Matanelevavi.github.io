@@ -32,10 +32,11 @@ const I18N = {
     skillsKicker: "02 · כישורים", skillsTitle: "כלי העבודה",
     skillsLangs: "שפות", skillsFrontend: "Web ו-Frontend",
     skillsBackend: "Backend ונתונים", skillsConcepts: "מושגים וכלים",
+    skillsAI: "AI ו-LLM",
 
     projKicker: "03 · פרויקטים", projTitle: "דברים שבניתי",
     projSub: "מבחר עבודות אקדמיות ואישיות. כל פרויקט מקושר לקוד המקור ב-GitHub.",
-    projAll: "לכל המאגרים ב-GitHub ←", projCode: "קוד",
+    projAll: "לכל המאגרים ב-GitHub ←", projCode: "קוד", projLive: "לאתר החי",
 
     journeyKicker: "04 · מסלול", journeyTitle: "השכלה, שירות וניסיון",
 
@@ -68,10 +69,11 @@ const I18N = {
     skillsKicker: "02 · Skills", skillsTitle: "Tools of the trade",
     skillsLangs: "Languages", skillsFrontend: "Web & Frontend",
     skillsBackend: "Backend & Data", skillsConcepts: "Concepts & Tools",
+    skillsAI: "AI & LLM",
 
     projKicker: "03 · Projects", projTitle: "Things I've built",
     projSub: "A selection of academic and personal work. Every project links to its source on GitHub.",
-    projAll: "See all repositories on GitHub →", projCode: "Code",
+    projAll: "See all repositories on GitHub →", projCode: "Code", projLive: "Live app",
 
     journeyKicker: "04 · Journey", journeyTitle: "Education, service & experience",
 
@@ -90,24 +92,37 @@ const ROLES = {
 
 /* ---------------- Skills ---------------- */
 const SKILLS = {
-  langs:    ["Java", "Python", "C", "C++", "SQL", "TypeScript"],
-  front:    ["React", "Vite", "Tailwind CSS", "HTML5", "JavaScript"],
-  back:     ["FastAPI", "PostgreSQL", "SQLAlchemy", "Pandas", "NumPy", "Sockets"],
-  concepts: ["Data Structures", "Algorithms", "OOP", "Git", "Docker", "Modular Design"],
+  langs:    ["Java", "Python", "C", "C++", "JavaScript", "TypeScript", "SQL"],
+  front:    ["React", "Next.js", "React Native (Expo)", "Vite", "Tailwind CSS", "HTML5"],
+  back:     ["FastAPI", "PostgreSQL", "SQLAlchemy", "Firebase", "Supabase", "NoSQL", "Pandas", "NumPy", "Sockets"],
+  concepts: ["Data Structures", "Algorithms", "OOP", "Design Patterns", "Git", "Docker", "GitHub Actions", "Modular Design"],
+  ai:       ["Google Gemini", "Prompt Engineering", "RAG", "Model Context Protocol (MCP)", "LangGraph", "Agentic Workflows"],
 };
 
 /* ---------------- Projects ---------------- */
 const PROJECTS = [
   {
     icon: "🗜️", featured: true,
-    flag: { he: "מוצג", en: "Featured" },
-    title: "Adaptive rANS Compression + Encryption",
+    flag: { he: "פרויקט גמר מצטיין", en: "Outstanding Final Project" },
+    title: "Rygrans - Adaptive rANS Compression + Encryption",
     desc: {
-      he: "מנוע דחיסה אנטרופי (rANS) אדפטיבי מבוסס בלוקים עם מנגנון הצפנה משולב, מבוסס מאמר מחקרי. המודל מתעדכן רק כאשר ביט המפתח הוא 1 - בלי המפתח הפענוח מייצר פלט שונה לחלוטין. נמדד מול HTSCodecs ו-Arithmetic Coding.",
-      en: "An adaptive, block-based rANS entropy coder with an integrated encryption mechanism, derived from a research paper. The model updates only when the key bit is 1 - without the key, decompression yields completely different output. Benchmarked against HTSCodecs and Arithmetic Coding.",
+      he: "מנוע דחיסה ברמת ביט (rANS) אדפטיבי עם הצפנה משולבת בתוך אותו תהליך: טבלת ההסתברויות מתעדכנת רק כאשר הביט המתאים במפתח הסודי שווה 1, כך שדחיסה והצפנה חולקות בדיוק אותו מנגנון, בלי שכבה נפרדת. נבנה מאפס ב-C++17, נבחר כפרויקט גמר מצטיין והוצג בכנס הפרויקטים הגמר של המחלקה למדעי המחשב באוניברסיטת אריאל, בהנחיית פרופ' דנה שפירא, דיקנית המחלקה. נבדק מול Huffman, Arithmetic Coding וגבול האנטרופיה התיאורטי, כולל רגישות למפתח ואפקט מפולת שלגים בין מפתחות דומים.",
+      en: "A bit-level adaptive rANS (Range Asymmetric Numeral Systems) compression engine with encryption built into the same process: the probability table updates only when the matching bit of a secret key equals 1, so compression and encryption share one mechanism instead of separate layers. Built from scratch in C++17, selected as an outstanding final project and presented at Ariel University's Computer Science Department Final Projects Conference, advised by Prof. Dana Shapira, Dean of the Computer Science Department. Benchmarked against Huffman coding, arithmetic coding and the theoretical entropy bound, including key-sensitivity and avalanche-effect testing.",
     },
     tags: ["C++17", "Python", "rANS", "Cryptography", "Benchmarking"],
     repo: "https://github.com/Matanelevavi/ANS-Compression",
+  },
+  {
+    icon: "🧭", featured: true,
+    flag: { he: "AI · Full-Stack", en: "AI · Full-Stack" },
+    title: "Shvilit - AI-Powered Hebrew Travel Guide",
+    desc: {
+      he: "אפליקציית טיולים חוצת-פלטפורמות ההופכת כל אתר עניין בישראל לסיור מונחה מותאם אישית - כטקסט, אודיו או וידאו - מבוססת נתוני ויקיפדיה כדי למנוע הזיות. נבנתה ושוגרה לבד: איתור מיקום גיאוגרפי, יצירת תוכן מבוססת Gemini עם עיגון במקורות, TTS ל-Edge, הרכבת וידאו עם FFmpeg, אימות Google/אורח, שאלוני חידון אוטומטיים, נקודות ולוח מובילים, ודשבורד אנליטיקס לניהול. ארכיטקטורת Adapter Pattern מאפשרת החלפת ספקי שירות (LLM, TTS, מקור מידע) בלי לגעת בממשק.",
+      en: "A cross-platform travel app that turns any point of interest in Israel into a narrated tour on demand - as text, audio or video - grounded in Wikipedia data to avoid hallucinations. Built and shipped solo: geolocation-based discovery, Gemini-based script generation grounded in retrieved sources, edge-tts narration, server-side video assembly with FFmpeg, Google OAuth / guest auth, auto-generated quizzes, a points and leaderboard system, and an admin analytics dashboard. An adapter-pattern architecture lets every external service (POI source, LLM, TTS) be swapped without touching the UI.",
+    },
+    tags: ["Expo", "React Native", "TypeScript", "FastAPI", "Google Gemini", "Supabase"],
+    repo: "https://github.com/Matanelevavi/shvilit",
+    live: "https://shvilit.shvilit-tours.workers.dev",
   },
   {
     icon: "📈", featured: true,
@@ -119,6 +134,17 @@ const PROJECTS = [
     },
     tags: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Docker"],
     repo: "https://github.com/Matanelevavi/Planit",
+  },
+  {
+    icon: "📦",
+    flag: { he: "PWA קהילתי", en: "Community PWA" },
+    title: "Tavi-Li - Neighborhood Package Sharing",
+    desc: {
+      he: "PWA קהילתי לשכנים לשיתוף איסוף חבילות - מי שכבר בדרך לנקודת איסוף יכול לאסוף גם חבילות של שכנים באותו מסלול. חוקי אבטחה של Firestore אוכפים בעלות פר-מסמך, ולידציית שדות ותביעה בודדת לכל משלוח; דירוגים מוגבלים לעדכון יחיד למדרג כדי למנוע ניפוח. 52 בדיקות יחידה לחוקי האבטחה, מורצות מול אמולטור Firestore.",
+      en: "A community PWA for neighbors to share package pickups - travelers already collecting a package can grab packages for neighbors on the same route. Firestore security rules enforce per-document ownership, field validation and one-claim-per-shipment logic; ratings are capped to one updatable slot per rater to prevent inflation. 52 unit tests for the security rules, run against the Firestore emulator.",
+    },
+    tags: ["Next.js", "TypeScript", "Firebase", "Firestore", "Tailwind CSS"],
+    live: "https://tavi-li.vercel.app",
   },
   {
     icon: "🌐",
@@ -136,10 +162,10 @@ const PROJECTS = [
     flag: { he: "אלגו-מסחר", en: "Algo-Trading" },
     title: "Algo-Trade",
     desc: {
-      he: "פרויקט מסחר אלגוריתמי בפייתון - חקר אסטרטגיות, עיבוד נתוני שוק ולוגיקת החלטה אוטומטית.",
-      en: "An algorithmic trading project in Python - strategy exploration, market-data processing and automated decision logic.",
+      he: "צנרת נתונים בפייתון לשליפה, בדיקה וויזואליזציה של נתוני מט\"ח מ-Polygon.io: הורדה ותחזוקה של נתונים היסטוריים לדקה עבור מספר צמדי מטבעות, חישוב שערים צולבים שאינם זמינים ישירות מה-API, דשבורדים אינטראקטיביים של נרות יפניים והשוואות בין צמדים עם Plotly, וסוויטת בדיקות ייעודית לשלמות ורציפות הנתונים.",
+      en: "A Python data pipeline for fetching, testing and visualizing Forex market data via the Polygon.io API: downloads and maintains minute-by-minute historical data for multiple currency pairs, calculates cross-pair rates not available directly from the API, interactive candlestick dashboards and cross-pair comparisons with Plotly, and a dedicated test suite for data integrity and continuity.",
     },
-    tags: ["Python", "Pandas", "Data Analysis"],
+    tags: ["Python", "Pandas", "Plotly", "Polygon.io", "Testing"],
     repo: "https://github.com/Matanelevavi/Algo-Trade",
   },
   {
@@ -169,13 +195,25 @@ const PROJECTS = [
 /* ---------------- Timeline ---------------- */
 const TIMELINE = [
   {
+    type: "edu", period: "2026",
+    role: { he: "AI for Software Developers - Advanced Track", en: "AI for Software Developers - Advanced Track" },
+    org: { he: "TechTroop AI Academy (בשיתוף Elevation ושירות התעסוקה)", en: "TechTroop AI Academy (with Elevation & Israel's Employment Service)" },
+    desc: {
+      he: "קורס בן 30 שעות: הנדסת פרומפטים לקוד, פיתוח AI-native (Cursor, Claude Code), הנדסת קונטקסט, מערכות RAG, Model Context Protocol (MCP), אוטומציות (Gemini, Apps Script, n8n), עיצוב agents עם LangGraph ומערכות multi-agent. פרויקט מסכם: פתרון LLM מקצה-לקצה המשלב RAG, איסוף קונטקסט ותזמור אגנטי.",
+      en: "A 30-hour course: prompt engineering for code, AI-native development (Cursor, Claude Code), context engineering, RAG systems, the Model Context Protocol (MCP), automations (Gemini, Apps Script, n8n), agent design with LangGraph, and multi-agent systems. Final project: an end-to-end LLM solution combining RAG, context ingestion and agentic orchestration.",
+    },
+  },
+  {
     type: "edu", period: "2022 – 2027",
     role: { he: "תואר B.Sc. במדעי המחשב", en: "B.Sc. in Computer Science" },
     org: { he: "אוניברסיטת אריאל", en: "Ariel University" },
-    desc: { he: "מבני נתונים, אלגוריתמים, תכנות מערכות, OOP, מסדי נתונים, הסתברות.", en: "Data Structures, Algorithms, System Programming, OOP, Databases, Probability." },
+    desc: {
+      he: "יסודות מתמטיים: חדו\"א 1-2, אלגברה לינארית 1-2, מבנים דיסקרטיים, לוגיקה ותורת הקבוצות, הסתברות והיסק סטטיסטי. מדעי המחשב תיאורטיים: מבני נתונים, אלגוריתמים 1-2, אוטומטים ושפות פורמליות, חישוביות. מערכות: מערכות ספרתיות, ארכיטקטורת מחשבים, מערכות הפעלה, תכנות מערכות 1-2, תכנות מונחה-עצמים, רשתות תקשורת. יישומי/נתונים: מסדי נתונים (ציון 99), דחיסת נתונים, למידה עמוקה ועיבוד שפה טבעית.",
+      en: "Mathematical foundations: Calculus 1 & 2, Linear Algebra 1 & 2, Discrete Structures, Logic and Set Theory, Probability, Statistical Inference. Theoretical CS: Data Structures, Algorithms 1 & 2, Automata and Formal Languages, Computability. Systems: Digital Systems, Computer Architecture, Operating Systems, Systems Programming 1 & 2, Object-Oriented Programming, Computer Networks. Applied / Data: Databases (grade: 99), Data Compression, Deep Learning and Natural Language Processing.",
+    },
   },
   {
-    type: "mil", period: "2023 – 2025",
+    type: "mil", period: "2023 – 2026",
     role: { he: "מילואים - מלחמת חרבות ברזל", en: "Reserves - Iron Swords War" },
     org: { he: "צה\"ל, עזה ולבנון", en: "IDF, Gaza & Lebanon" },
     desc: { he: "שירות מילואים מבצעי תחת אחריות גבוהה.", en: "Operational reserve service under high responsibility." },
@@ -214,7 +252,7 @@ const el = (tag, cls, html) => {
 let lang = localStorage.getItem("ml-lang") || "he";
 
 function renderChips() {
-  const map = { chipsLangs: SKILLS.langs, chipsFront: SKILLS.front, chipsBack: SKILLS.back, chipsConcepts: SKILLS.concepts };
+  const map = { chipsLangs: SKILLS.langs, chipsFront: SKILLS.front, chipsBack: SKILLS.back, chipsConcepts: SKILLS.concepts, chipsAI: SKILLS.ai };
   for (const [id, arr] of Object.entries(map)) {
     const box = document.getElementById(id);
     box.innerHTML = "";
@@ -237,9 +275,29 @@ function renderProjects() {
       <p class="pc-desc">${p.desc[lang]}</p>
       <div class="pc-tags">${tags}</div>
       <div class="pc-links">
-        <a href="${p.repo}" target="_blank" rel="noopener">⌥ ${I18N[lang].projCode} →</a>
+        ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">⌥ ${I18N[lang].projCode} →</a>` : ""}
+        ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener">🔗 ${I18N[lang].projLive} →</a>` : ""}
       </div>`;
     grid.appendChild(card);
+  });
+  initCardTilt();
+}
+
+const REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function initCardTilt() {
+  if (REDUCE_MOTION) return;
+  document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("mousemove", e => {
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      card.style.setProperty("--mx", `${(x / r.width) * 100}%`);
+      card.style.setProperty("--my", `${(y / r.height) * 100}%`);
+      const rx = ((y / r.height) - 0.5) * -6;
+      const ry = ((x / r.width) - 0.5) * 6;
+      card.style.transform = `translateY(-6px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    card.addEventListener("mouseleave", () => { card.style.transform = ""; });
   });
 }
 
@@ -338,15 +396,145 @@ function initNav() {
   sections.forEach(s => spy.observe(s));
 }
 
+/* ---------------- Hero particle constellation ---------------- */
+function initParticles() {
+  const canvas = $("#heroCanvas");
+  const hero = $("#hero");
+  if (!canvas || !hero) return;
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+  const mouse = { x: null, y: null };
+
+  function accentColor() {
+    return getComputedStyle(document.documentElement).getPropertyValue("--i3").trim() || "#06b6d4";
+  }
+
+  function resize() {
+    canvas.width = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+    const count = Math.min(70, Math.floor((canvas.width * canvas.height) / 18000));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+    }));
+  }
+
+  function frame() {
+    const accent = accentColor();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      if (mouse.x != null) {
+        const dx = mouse.x - p.x, dy = mouse.y - p.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 140 && dist > 0.01) { p.x -= (dx / dist) * 0.6; p.y -= (dy / dist) * 0.6; }
+      }
+    });
+
+    ctx.fillStyle = accent;
+    particles.forEach(p => {
+      ctx.globalAlpha = 0.55;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2); ctx.fill();
+    });
+
+    ctx.strokeStyle = accent;
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const a = particles[i], b = particles[j];
+        const dist = Math.hypot(a.x - b.x, a.y - b.y);
+        if (dist < 120) {
+          ctx.globalAlpha = (1 - dist / 120) * 0.25;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+    }
+    ctx.globalAlpha = 1;
+    if (!REDUCE_MOTION) requestAnimationFrame(frame);
+  }
+
+  window.addEventListener("resize", resize, { passive: true });
+  hero.addEventListener("mousemove", e => {
+    const r = hero.getBoundingClientRect();
+    mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+  }, { passive: true });
+  hero.addEventListener("mouseleave", () => { mouse.x = null; mouse.y = null; });
+
+  resize();
+  frame();
+}
+
+/* ---------------- Animated stat counters ---------------- */
+function initCounters() {
+  const nums = document.querySelectorAll(".stat-num[data-count-to]");
+  const io2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const node = entry.target;
+      const target = parseInt(node.dataset.countTo, 10);
+      const suffix = node.dataset.suffix || "";
+      if (REDUCE_MOTION) { node.textContent = target + suffix; io2.unobserve(node); return; }
+      const duration = 1100;
+      const start = performance.now();
+      const tick = (now) => {
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        node.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      io2.unobserve(node);
+    });
+  }, { threshold: 0.4 });
+  nums.forEach(n => io2.observe(n));
+}
+
+/* ---------------- Live GitHub stat ---------------- */
+let ghRepoCount = null;
+function renderGhStat() {
+  const node = $("#ghLiveStat");
+  if (!node || ghRepoCount == null) return;
+  const label = lang === "he" ? "מאגרים ציבוריים ב-GitHub כרגע" : "public repositories on GitHub right now";
+  node.textContent = `${ghRepoCount} ${label}`;
+}
+async function loadGithubStats() {
+  try {
+    const res = await fetch("https://api.github.com/users/Matanelevavi");
+    if (!res.ok) throw new Error("bad response");
+    const data = await res.json();
+    ghRepoCount = data.public_repos;
+    renderGhStat();
+  } catch (e) {
+    const wrap = $("#ghLive");
+    if (wrap) wrap.remove();
+  }
+}
+
+/* ---------------- Back to top ---------------- */
+function initToTop() {
+  const btn = $("#toTop");
+  if (!btn) return;
+  window.addEventListener("scroll", () => btn.classList.toggle("show", window.scrollY > 500), { passive: true });
+  btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: REDUCE_MOTION ? "auto" : "smooth" }));
+}
+
 /* ---------------- Init ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   applyTheme(localStorage.getItem("ml-theme") || "dark");
   renderChips();
   applyLang(lang);          // also renders projects, timeline, reveals, rotator
   initNav();
+  initParticles();
+  initCounters();
+  initToTop();
+  loadGithubStats();
   $("#year").textContent = new Date().getFullYear();
 
-  $("#langToggle").addEventListener("click", () => applyLang(lang === "he" ? "en" : "he"));
+  $("#langToggle").addEventListener("click", () => { applyLang(lang === "he" ? "en" : "he"); renderGhStat(); });
   $("#themeToggle").addEventListener("click", () => {
     const cur = document.documentElement.getAttribute("data-theme");
     applyTheme(cur === "dark" ? "light" : "dark");
