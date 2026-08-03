@@ -22,7 +22,7 @@ const I18N = {
 
     aboutKicker: "01 · אודות", aboutTitle: "הרבה מעבר לקוד",
     aboutP1: "סטודנט מוטיבציוני למדעי המחשב עם בסיס חזק ב-Java, ב-Python וב-C, ותשוקה אמיתית לכתיבת קוד נקי, יעיל וקל לתחזוקה. לומד מהר, מסיים מה שמתחיל, ושם לב לפרטים הקטנים.",
-    aboutP2: "לפני האוניברסיטה שירתתי כלוחם ומפקד צוות בחטיבת גולני, ולאחר מכן גויסתי למילואים במלחמת חרבות ברזל. הרקע הזה עיצב את הדרך שבה אני עובד: רגוע תחת לחץ, אחראי, ואפשר לסמוך עליי כשזה חשוב.",
+    aboutP2: "לפני האוניברסיטה שירתתי כלוחם בחטיבת גולני, ולאחר מכן גויסתי למילואים במלחמת חרבות ברזל. הרקע הזה עיצב את הדרך שבה אני עובד: רגוע תחת לחץ, אחראי, ואפשר לסמוך עליי כשזה חשוב.",
     aboutP3: "במקביל ללימודים אני חונך נוער עם מוגבלויות והובלתי תוכניות חינוכיות - אני באמת נהנה לעבוד עם אנשים, לא רק עם מכונות.",
     trait1Title: "ממושמע", trait1Text: "ניהול עצמי חזק ועמידה במשימות, גם תחת לחץ.",
     trait2Title: "אנליטי", trait2Text: "פתרון בעיות מובנה - מאלגוריתמים ועד ארכיטקטורה.",
@@ -59,7 +59,7 @@ const I18N = {
 
     aboutKicker: "01 · About", aboutTitle: "More than code",
     aboutP1: "I'm a motivated Computer Science student with a strong foundation in Java, Python and C, and a real passion for writing clean, efficient, maintainable code. I learn fast, I ship, and I care about getting the details right.",
-    aboutP2: "Before university I served as a combat soldier and team leader in the Golani Brigade, and was later called up for reserve duty during the Iron Swords war. That background shaped how I work: calm under pressure, responsible, and dependable when it matters.",
+    aboutP2: "Before university I served as a combat soldier in the Golani Brigade, and was later called up for reserve duty during the Iron Swords war. That background shaped how I work: calm under pressure, responsible, and dependable when it matters.",
     aboutP3: "Alongside my studies I mentor youth with disabilities and have led educational programs - I genuinely enjoy working with people, not just machines.",
     trait1Title: "Disciplined", trait1Text: "Strong self-management and follow-through, even under pressure.",
     trait2Title: "Analytical", trait2Text: "Structured problem-solving from algorithms to architecture.",
@@ -197,10 +197,10 @@ const TIMELINE = [
   {
     type: "edu", period: "2026",
     role: { he: "AI for Software Developers - Advanced Track", en: "AI for Software Developers - Advanced Track" },
-    org: { he: "TechTroop AI Academy (בשיתוף Elevation ושירות התעסוקה)", en: "TechTroop AI Academy (with Elevation & Israel's Employment Service)" },
+    org: { he: "TechTroop AI Academy (בשיתוף Elevation)", en: "TechTroop AI Academy (with Elevation)" },
     desc: {
-      he: "קורס בן 30 שעות: הנדסת פרומפטים לקוד, פיתוח AI-native (Cursor, Claude Code), הנדסת קונטקסט, מערכות RAG, Model Context Protocol (MCP), אוטומציות (Gemini, Apps Script, n8n), עיצוב agents עם LangGraph ומערכות multi-agent. פרויקט מסכם: פתרון LLM מקצה-לקצה המשלב RAG, איסוף קונטקסט ותזמור אגנטי.",
-      en: "A 30-hour course: prompt engineering for code, AI-native development (Cursor, Claude Code), context engineering, RAG systems, the Model Context Protocol (MCP), automations (Gemini, Apps Script, n8n), agent design with LangGraph, and multi-agent systems. Final project: an end-to-end LLM solution combining RAG, context ingestion and agentic orchestration.",
+      he: "קורס בן 30 שעות: הנדסת פרומפטים לקוד, פיתוח AI-native (Cursor, Claude Code), הנדסת קונטקסט, מערכות RAG, Model Context Protocol (MCP), אוטומציות (Gemini, Apps Script, n8n), עיצוב agents עם LangGraph ומערכות multi-agent.",
+      en: "A 30-hour course: prompt engineering for code, AI-native development (Cursor, Claude Code), context engineering, RAG systems, the Model Context Protocol (MCP), automations (Gemini, Apps Script, n8n), agent design with LangGraph, and multi-agent systems.",
     },
   },
   {
@@ -226,7 +226,7 @@ const TIMELINE = [
   },
   {
     type: "mil", period: "2019 – 2021",
-    role: { he: "לוחם ומפקד צוות", en: "Combat Soldier & Team Leader" },
+    role: { he: "לוחם", en: "Combat Soldier" },
     org: { he: "חטיבת גולני, צה\"ל", en: "Golani Brigade, IDF" },
     desc: { he: "הובלת צוותים קטנים במצבי לחץ גבוהים - משמעת, הסתגלות ופתרון בעיות.", en: "Led small teams under high-pressure situations - discipline, adaptability and problem-solving." },
   },
