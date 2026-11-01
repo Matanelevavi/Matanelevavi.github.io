@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - Agents (personal)</title>
+<meta name="description" content="Privacy Policy for Agents (personal): how Google user data is accessed, used, stored and shared.">
+<style>
+  :root { --bg:#ffffff; --fg:#1b1f24; --muted:#5b6470; --line:#d9dee5; --link:#0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171c; --fg:#e8eaed; --muted:#9aa3ae; --line:#2b313a; --link:#8ab4f8; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:1.9rem; margin:0 0 4px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  a { color:var(--link); }
+  hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
+  footer { color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="sub">Agents (personal) &middot; Last updated: November 1, 2026</p>
+
+  <p>Agents (personal) (the "App") is a private, single-user personal assistant operated by Matanel Levavi (the "Operator"). It is not offered to the public. The only people whose Google data the App handles are the Operator himself and, if he chooses, additional Google accounts that he personally owns. See the <a href="https://matanelevavi.github.io/agents/">App home page</a> for a description.</p>
+
+  <h2>1. Google user data the App accesses</h2>
+  <p>Only after the account owner grants access through Google's consent screen, the App may access:</p>
+  <ul>
+    <li><strong>Google Calendar:</strong> events (read), and creation or update of events when the owner requests it.</li>
+    <li><strong>Gmail:</strong> email messages and settings (read), and creation of email drafts for the owner to review.</li>
+    <li><strong>Google Tasks:</strong> tasks (read), and creation or update of tasks when the owner requests it.</li>
+    <li><strong>Google Drive:</strong> file names and metadata only (read). The App does not read file contents through this permission.</li>
+  </ul>
+
+  <h2>2. How the data is used</h2>
+  <p>Google user data is used only to provide the App's user-facing features to the account owner: daily briefings, finding free time, summarizing messages, preparing draft replies and maintaining a task list. It is not used for advertising, profiling, selling, or any purpose unrelated to these features.</p>
+
+  <h2>3. How the data is processed and stored</h2>
+  <ul>
+    <li>The App runs in the Operator's own Amazon Web Services (AWS) account.</li>
+    <li>Google authorization tokens are stored encrypted in AWS Secrets Manager and are used only by the App.</li>
+    <li>To produce answers, relevant content (for example the text of an email or the details of a calendar event) is sent to a large language model hosted on Amazon Bedrock inside that AWS account. Under Amazon Bedrock's terms, inputs and outputs are not used to train the underlying models and are not shared with third parties.</li>
+    <li>Results are delivered to the owner in a private Telegram chat that only the owner can access. Telegram therefore receives the text of those messages.</li>
+    <li>Operational records (such as logs and conversation state) are kept for a limited period and then deleted. The App does not keep a permanent copy of the owner's mailbox, calendar or Drive.</li>
+  </ul>
+
+  <h2>4. Sharing</h2>
+  <p>Google user data is not sold, rented or shared with any third party, except for the processors named in section 3 (AWS, including Amazon Bedrock, and Telegram), which are used solely to operate the App for the owner. Human access to the data is limited to the Operator, who is the account owner.</p>
+
+  <h2>5. Google API Services User Data Policy</h2>
+  <p>The App's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>6. Security</h2>
+  <p>Access to the AWS account is protected by multi-factor authentication. The App follows the principle of least privilege: read access and write access to Google data are granted separately, and actions that change data are limited to a small, explicit set of operations.</p>
+
+  <h2>7. Your choices and data deletion</h2>
+  <p>The account owner can revoke the App's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. After revocation the stored authorization tokens stop working, and the Operator deletes them from the App. To request deletion of any other data the App holds about you, contact the Operator at the address below.</p>
+
+  <h2>8. Changes</h2>
+  <p>This policy may be updated. The date at the top shows the latest revision.</p>
+
+  <h2>9. Contact</h2>
+  <p>Matanel Levavi, <a href="mailto:matanelevavi@gmail.com">matanelevavi@gmail.com</a></p>
+
+  <hr>
+  <footer><a href="https://matanelevavi.github.io/agents/">Back to the App home page</a></footer>
+</main>
+</body>
+</html>
